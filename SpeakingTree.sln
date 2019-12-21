@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28307.902
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SpeakingTree.Web", "SpeakingTree\SpeakingTree.Web.csproj", "{D6F24593-2FA8-40AE-89C8-5B793CA6DB90}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SpeakingTree.Data", "ClassLibrary1\SpeakingTree.Data.csproj", "{572ACDA2-0784-4A14-8279-89DB72AB7067}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{D6F24593-2FA8-40AE-89C8-5B793CA6DB90}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D6F24593-2FA8-40AE-89C8-5B793CA6DB90}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D6F24593-2FA8-40AE-89C8-5B793CA6DB90}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D6F24593-2FA8-40AE-89C8-5B793CA6DB90}.Release|Any CPU.Build.0 = Release|Any CPU
+		{572ACDA2-0784-4A14-8279-89DB72AB7067}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{572ACDA2-0784-4A14-8279-89DB72AB7067}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{572ACDA2-0784-4A14-8279-89DB72AB7067}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{572ACDA2-0784-4A14-8279-89DB72AB7067}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {4EB96DA7-C0A1-421C-9D24-1547C8DB8759}
+	EndGlobalSection
+EndGlobal

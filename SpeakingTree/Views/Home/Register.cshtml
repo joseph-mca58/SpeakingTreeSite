@@ -1,0 +1,269 @@
+﻿@model SpeakingTree.Models.User
+
+@{
+    ViewBag.Title = "Register";
+}
+
+<h2>Registration</h2>
+<p></p>
+<p><b>Please enter following details to complete your registration.</b></p>
+<p></p>
+
+@using (Html.BeginForm("Register", "Home", FormMethod.Post, new { enctype = "multipart/form-data", id = "fileuploadform", @class = "form-horizontal" }))
+{
+    @Html.AntiForgeryToken()
+
+    <div class="row">
+        <div class="col-sm-2">Registering as</div>
+        <div class="col-sm-10">
+            School:@Html.RadioButtonFor(x => x.UserType, "School")
+            Student:@Html.RadioButtonFor(x => x.UserType, "Student")
+
+        </div>
+    </div>
+
+    <p></p>
+
+    <div class="row">
+        <div class="col-sm-2" id="dvSchoolName">School Name</div>
+        <div class="col-sm-2" id="dvStudentName">Student Name</div>
+        <div class="col-sm-10">
+            @Html.TextBoxFor(model => model.Name, new { @style = "width : 250px; autocomplete : off;", @class = "STTextbox" })
+            @Html.ValidationMessageFor(model => model.Name, "", new { @class = "text-danger" })
+
+        </div>
+    </div>
+
+    <p></p>
+    <div class="row" id="dvBranch">
+        <div class="col-sm-2">Branch</div>
+        <div class="col-sm-10">
+            @Html.TextBoxFor(model => model.school.Branch, new { @style = "width : 250px" })
+
+        </div>
+    </div>
+    <p></p>
+    <div class="row">
+        <div class="col-sm-2">Area / Locality </div>
+        <div class="col-sm-10">
+            @Html.TextBoxFor(model => model.Area, new { @style = "width : 250px" })
+            @Html.ValidationMessageFor(model => model.Area, "", new { @class = "text-danger" })
+
+        </div>
+    </div>
+    <p></p>
+
+    <div class="row">
+        <div class="col-sm-2">City </div>
+        <div class="col-sm-10">
+            @Html.TextBoxFor(model => model.City, new { @style = "width : 250px" })
+            @Html.ValidationMessageFor(model => model.City, "", new { @class = "text-danger" })
+
+        </div>
+    </div>
+    <p></p>
+    <div class="row">
+        <div class="col-sm-2">State</div>
+        <div class="col-sm-10">
+            @Html.DropDownListFor(model => model.State, Model.lstState, "Select", new { @class = "form-control", id = "selectStateId", @style = "width : 250px" })
+            @Html.ValidationMessageFor(model => model.State, "", new { @class = "text-danger" })
+
+        </div>
+    </div>
+
+    <p></p>
+
+    <div class="row">
+        <div class="col-sm-2">District</div>
+        <div class="col-sm-10">
+            @Html.DropDownListFor(model => model.District, Model.lstDistrict, "Select", new { @class = "form-control", id = "selectDistrictId", @style = "width : 250px" })
+            @Html.ValidationMessageFor(model => model.District, "", new { @class = "text-danger" })
+
+        </div>
+    </div>
+    <p></p>
+    <div class="row">
+        <div class="col-sm-2">Pincode </div>
+        <div class="col-sm-10">
+            @Html.TextBoxFor(model => model.Pincode, new { @style = "width : 250px" })
+            @Html.ValidationMessageFor(model => model.Pincode, "", new { @class = "text-danger" })
+
+        </div>
+    </div>
+    <p></p>
+    <div class="row">
+        <div class="col-sm-2">Address </div>
+        <div class="col-sm-10">
+            @Html.TextAreaFor(model => model.Address, new { @style = "width : 250px;height: 25px;" })
+            @Html.ValidationMessageFor(model => model.Address, "", new { @class = "text-danger" })
+
+        </div>
+    </div>
+    <p></p>
+    <div class="row">
+        <div class="col-sm-2">Email Id </div>
+        <div class="col-sm-10">
+            @Html.TextBoxFor(model => model.EmailId, new { @style = "width : 250px" })
+            @Html.ValidationMessageFor(model => model.EmailId, "", new { @class = "text-danger" })
+
+        </div>
+    </div>
+    <p></p>
+    <div class="row">
+        <div class="col-sm-2">Contact Number </div>
+        <div class="col-sm-10">
+            @Html.TextBoxFor(model => model.ContactNo, new { @style = "width : 250px" })
+            @Html.ValidationMessageFor(model => model.ContactNo, "", new { @class = "text-danger" })
+
+        </div>
+
+    </div>
+    <p></p>
+    <div class="row">
+        <div class="col-sm-2" id="dvPersonContact">Registering Person Num.</div>
+        <div class="col-sm-10" id="dvPersonContactTxt">
+            @Html.TextBoxFor(model => model.school.PersonContact, new { @style = "width : 250px" })
+
+        </div>
+    </div>
+
+    <p></p><div class="row" id="dvExamOption">
+        <div class="col-sm-2">Exam Option </div>
+        <div class="col-sm-10">
+
+            Online:@Html.RadioButtonFor(x => x.school.ExamOption, "On")
+            Offline:@Html.RadioButtonFor(x => x.school.ExamOption, "Of")
+        </div>
+    </div>
+    <p></p>
+    <div class="row" id="dvStrength">
+        <div class="col-sm-2">Strength </div>
+        <div class="col-sm-10">
+            @Html.TextBoxFor(model => model.school.Strength, new { @style = "width : 250px" })
+
+        </div>
+    </div>
+    <p></p>
+    <div class="row" id="dvClass">
+        <div class="col-sm-2">Class</div>
+        <div class="col-sm-10">
+            @Html.TextBoxFor(model => model.student.StudentClass, new { @style = "width : 250px" })
+        </div>
+    </div>
+    <p></p>
+    <div class="row" id="dvParentName">
+        <div class="col-sm-2">Parent Name</div>
+        <div class="col-sm-10">
+            @Html.TextBoxFor(model => model.student.ParentName, new { @style = "width : 250px" })
+
+        </div>
+    </div>
+    <p></p>
+    <div class="row" id="dvRole">
+        <div class="col-sm-2">Role</div>
+        <div class="col-sm-10">
+            @Html.HiddenFor(model => model.RoleId)
+            @*@Html.DropDownListFor(model => model.RoleId, Model.lstRole, "Select", new { @class = "form-control", id = "RoleId" })*@
+
+        </div>
+    </div>
+    <p></p>
+    <div class="row">
+        <div class="col-sm-2"></div>
+
+        <div class="col-sm-10">
+            <button class="btn btn-primary btn-sm" id="btn-impMeeting" type="submit" style="margin-left: 5px; margin-right: 5px;">Register</button>
+        </div>
+
+    </div>
+
+
+    <p></p>
+    <div class="row">
+        <div class="col-sm-2"></div>
+        <div class="col-sm-10">
+            <div class="col-sm-10"><h4> Already have an account? @Html.ActionLink("Log in", "Login", "Home")</h4></div>
+        </div>
+
+    </div>
+    
+}
+
+<script type="text/javascript">
+
+    $(document).ready(function () {
+
+        $("#dvStudentName").hide();
+        $("#dvClass").hide();
+        $("#dvParentName").hide();
+
+        $("#dvRole").hide();
+        $("#RoleId").val(3);
+
+        $('input[type=radio][name=UserType]').change(function () {
+            if (this.value == 'School') {
+                //hide student divs
+                $("#dvSchoolName").show();
+                $("#dvBranch").show();
+                $("#dvPersonContact").show();
+                $("#dvPersonContactTxt").show();
+                $("#dvExamOption").show();
+                $("#dvStrength").show();
+
+                $("#dvStudentName").hide();
+                $("#dvClass").hide();
+                $("#dvParentName").hide();
+                $("#RoleId").val(3);
+            }
+            else if (this.value == 'Student') {
+                //hide school divs
+
+                $("#dvSchoolName").hide();
+                $("#dvBranch").hide();
+                $("#dvPersonContact").hide();
+                $("#dvPersonContactTxt").hide();
+                $("#dvExamOption").hide();
+                $("#dvStrength").hide();
+
+                $("#dvStudentName").show();
+                $("#dvClass").show();
+                $("#dvParentName").show();
+
+                $("#RoleId").val(4);
+            }
+        });
+
+        //Dropdownlist Selectedchange event
+        $("#selectStateId").change(function () {
+            $("#selectDistrictId").empty();
+
+            $.ajax({
+                type: 'POST',
+                url: '@Url.Action("GetDistrictsByState")', // we are calling json method
+
+                dataType: 'json',
+
+                data: { stateId: $("#selectStateId").val() },
+               // here we are getting value of selected state and passing same value
+                  //as input to json method GetStates.
+
+                success: function (districts) {
+                    // states contains the JSON formatted list
+                    // of states passed from the controller
+
+                    $.each(districts, function (i, district) {
+                        $("#selectDistrictId").append('<option value="' + district.Value + '">' +
+                            district.Text + '</option>');
+                    // here we are adding option for States
+
+                    });
+                },
+                error: function (ex) {
+                    alert('Failed to retrieve Districts.' + ex);
+                }
+            });
+            return false;
+        });
+    });
+
+</script>

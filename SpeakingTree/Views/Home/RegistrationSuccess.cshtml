@@ -1,0 +1,37 @@
+﻿
+@{
+    ViewBag.Title = "RegistrationSuccess";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Registration Success!</h2>
+
+<p>Thank you for associating with Speaking Tree! </p>
+<p>Please use following username and password for login</p>
+
+
+<p></p>
+<div class="row">
+    <div class="col-sm-2">Username</div>
+    <div class="col-sm-10">
+        @ViewBag.RegistrationId
+
+    </div>
+</div>
+<p></p>
+<div class="row">
+    <div class="col-sm-2">Passowrd</div>
+    <div class="col-sm-10">
+        @ViewBag.Password
+
+    </div>
+</div>
+
+<p></p>
+<div class="row">
+    <div class="col-sm-3"></div>
+    @if (!(string.IsNullOrEmpty(ViewBag.RegistrationId)))
+    {
+        <div class="col-sm-9"><h3>Login : @Html.ActionLink("Login", "Login", "Home")</h3></div>
+    }
+</div>
