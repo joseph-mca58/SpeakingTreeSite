@@ -1,0 +1,54 @@
+﻿<header class="site-header">
+    <div class="primary-header">
+        <div class="container">
+            <a href="index.html" id="branding">
+                <img src="~/images/logo.png" alt="Lincoln high School">
+                <h1 class="site-title">Speaking Tree School</h1>
+            </a> <!-- #branding -->
+            <div class="main-navigation">
+                <button type="button" class="menu-toggle"><i class="fa fa-bars"></i></button>
+                <ul class="menu">
+                    <li id="liIndex" class="menu-item">@Html.ActionLink("Home", "Index", "Home")</li>
+                    <li id="liCourse" class="menu-item">@Html.ActionLink("Course", "Course", "Home")</li>
+                    <li id="liStudent" class="menu-item">@Html.ActionLink("Student", "Student", "Home")</li>
+                    <li id="liEvent" class="menu-item">@Html.ActionLink("Event", "Event", "Home")</li>
+                    <li id="liContact" class="menu-item">@Html.ActionLink("Contact", "Contact", "Home")</li>
+
+                </ul> <!-- .menu -->
+            </div> <!-- .main-navigation -->
+            <div class="mobile-navigation"></div>
+        </div> <!-- .container -->
+    </div> <!-- .primary-header -->
+    <div class="home-slider">
+        <div class="container">
+            <div class="slider">
+                <ul class="slides">
+                    <li>
+                        <div class="slide-caption">
+                            <h2 class="slide-title">I Love to learn! <br> Welcome back school!</h2>
+                            <p>Perspiciatis unde omnis iste natus error sit voluptatem accusantium totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</p>
+                            <a href="#" class="button primary large">Learn more</a>
+                        </div>
+                        <img src="~/dummy/kid.png" alt="">
+                    </li>
+                    <li>
+                        <div class="slide-caption">
+                            <h2 class="slide-title">I Love to Read! <br> Welcome back school!</h2>
+                            <p>Perspiciatis unde omnis iste natus error sit voluptatem accusantium totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</p>
+                            <a href="#" class="button primary large">Learn more</a>
+                        </div>
+                        <img src="~/dummy/kid.png" alt="">
+                    </li>
+                    <li>
+                        <div class="slide-caption">
+                            <h2 class="slide-title">I Love to Play! <br> Welcome back school!</h2>
+                            <p>Perspiciatis unde omnis iste natus error sit voluptatem accusantium totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</p>
+                            <a href="#" class="button primary large">Learn more</a>
+                        </div>
+                        <img src="~/dummy/kid.png" alt="">
+                    </li>
+                </ul> <!-- .slides -->
+            </div> <!-- .slider -->
+        </div> <!-- .container -->
+    </div> <!-- .home-slider -->
+</header>

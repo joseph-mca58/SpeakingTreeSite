@@ -1,51 +1,48 @@
-﻿@model SpeakingTree.Models.User
-
-@{
-    ViewBag.Title = "Home Page";
+﻿@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
 }
-<div class="row">
-    <div class="col-md-1">
 
-    </div>
-    <div class="col-md-11">
-        @TempData["LogoutMessage"]
-    </div>
-</div>
+<div class="fullwidth-block">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6">
+                <div class="boxed-section best-students">
+                    <h2 class="section-title  text-center">Our best students</h2>
+                    <ul class="best-students-grid">
+                        <li class="student"><a href="#"><img src="/dummy/student-md-1.jpg" alt="student 1"></a></li>
+                        <li class="student"><a href="#"><img src="/dummy/student-md-2.jpg" alt="student 2"></a></li>
+                        <li class="student"><a href="#"><img src="/dummy/student-md-3.jpg" alt="student 3"></a></li>
+                        <li class="student"><a href="#"><img src="/dummy/student-md-4.jpg" alt="student 4"></a></li>
+                        <li class="student"><a href="#"><img src="/dummy/student-md-5.jpg" alt="student 5"></a></li>
+                        <li class="student"><a href="#" class="more-student">See more</a></li>
+                    </ul>
+                </div> <!-- .boxed-section .best-students -->
+            </div>
+            <div class="col-md-6">
+                <div class="boxed-section request-form">
+                    <h2 class="section-title text-center">Login</h2>
+                    <form action="#">
+                        <div class="field">
+                            <label for="email">User Name:</label>
+                            <div class="control"><input type="text" id="userName" placeholder="User Name"></div>
+                        </div>
+                        <div class="field">
+                            <label for="name">Password</label>
+                            <div class="control"><input type="password" id="name" placeholder="Password"></div>
+                        </div>
 
-    <div class="jumbotron">
-        <h2>Speaking Tree<small> We Train! You Speak!</small></h2>
-        @*<p><a href="#" class="btn btn-primary btn-lg">Learn more &raquo;</a></p>*@
-    </div>
-
-    <div class="row">
-        <div class="col-md-4">
-            <h3>School / College / Corporate</h3>
-            <p>
-                <img src="~/pics/WhatsApp Image 2019-11-04 at 8.02.26 AM.jpeg" height="200" width="200" />
-            </p>
-            <p><a class="btn btn-default" href="https://speakingtree.org">Learn more &raquo;</a></p>
-        </div>
-        <div class="col-md-4">
-            <h2>We Train! You Speak!</h2>
-            <p>
-                <img src="~/pics/WhatsApp Image 2019-11-04 at 8.02.27 AM.jpeg" height="200" width="200" />
-            </p>
-            <p><a class="btn btn-default" href="https://speakingtree.org">Learn more &raquo;</a></p>
-        </div>
-        <div class="col-md-4">
-            <h2>Your Best Training Partner</h2>
-            <p>
-                <picture>
-                    <source srcset="~/pics/handhshake.webp" type="image/webp">
-                </picture>
-            </p>
-            <p><a class="btn btn-default" href="https://speakingtree.org">Learn more &raquo;</a></p>
-        </div>
-    </div>
-
-    <div>
-        <div class="=row">
-            <h3>Testimonials</h3>
-        </div>
-
-    </div>
+                        <div class="field no-label">
+                            <div class="control" style="padding-right:20px">
+                                <input type="submit" class="button" value="Login">
+                            </div>
+                            <div class="control">
+                                <input type="button" class="button" value="Cancel">
+                            </div>
+                        </div>
+                    </form>
+                </div> <!-- .boxed-section .request-form -->
+            </div>
+        </div>  <!-- .row -->
+    </div> <!-- .container -->
+</div> <!-- .fullwidth-block -->

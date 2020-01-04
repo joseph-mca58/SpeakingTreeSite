@@ -1,24 +1,52 @@
-﻿@{
-    ViewBag.Title = "Contact us";
+﻿
+@{
+    ViewBag.Title = "Contact";
+    Layout = "~/Views/Shared/_Layout.cshtml";
 }
-<h2>Contact us</h2>
- 
+<div class="fullwidth-block inner-content">
+    <div class="container">
+        <div class="map"></div>
 
-<address>
-    <b>SpeakingTree</b>,<br />
-    2nd Floor, Akhila Appratment, Khajana Jewelars Raod<br />
-    Opp. Nalanda School, Benz Cirlce<br />
-    Vijayawada, Andhra Pradesh - 520010<br />
-    <p></p>
-    <abbr title="Phone">P:</abbr>
-    +91 7995764874
-</address>
+        <div class="row">
+            <div class="col-md-6">
+                <form action="#" class="contact-form">
+                    <p>
+                        <label for="name">Name</label>
+                        <span class="control"><input type="text" id="name" placeholder="Yout name"></span>
+                    </p>
+                    <p>
+                        <label for="email">Email</label>
+                        <span class="control"><input type="text" id="email" placeholder="Email"></span>
+                    </p>
+                    <p>
+                        <label for="website">Website</label>
+                        <span class="control"><input type="text" id="website" placeholder="Website"></span>
+                    </p>
+                    <p>
+                        <label for="message">Name</label>
+                        <span class="control"><textarea id="message" placeholder="Message"></textarea></span>
+                    </p>
+                    <p class="text-right">
+                        <input type="submit" value="Send message">
+                    </p>
+                </form>
+            </div>
+            <div class="col-md-6">
+                <div class="contact-info">
+                    <address>
+                        <strong>Address</strong>
+                        <p>Company Name INC. <br>290-2912 Oits Ave <br>Bronx, NY 10465</p>
+                    </address>
+                    <div class="contact">
+                        <strong>Contact</strong>
+                        <p>
+                            <a href="tel:532930098891">(532) 930 098 891</a>
+                            <a href="mailto:office@companyname.com">office@companyname.com</a> <br>
 
-<address>
-    <strong>Support:</strong>   <a href="mailto:speakingtreevja@gmail.com">speakingtreevja@gmail.com</a><br />
-</address>
-
-<div class="row">
-    <div class="col-sm-3"></div>
-     <div class="col-sm-9"><h3>Enquiry : @Html.ActionLink("Have a query? submit here!", "Enquiry", "Home")</h3></div>
-</div>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div> <!-- .fullwidth-block -->
